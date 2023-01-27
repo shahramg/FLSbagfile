@@ -14,7 +14,7 @@ This software was developed using MATLAB R2022b for academic use.
   * Fetch a point cloud given its id in a sequence that constitutes a scene.
 
 # Limitations
-The flight path of FLSs must be formatted as described in Section Input.
+To generate a bag file, the flight path of FLSs must be formatted as described in Create a Bag File below.  This is the only format we are aware of given the novely of FLSs and their displays.  We will extend this repository with additional formats for FLS flight paths as they become available.  
 
 # Getting the Source
 ```bash
@@ -45,4 +45,4 @@ clear classes;
 rehash toolboxcache;
 ```
 
-# Input
+# Create a Bag File
