@@ -52,6 +52,6 @@ writeFlightPathToFile(FLSArray, Filename, Topic)
 ```
 FLSArray is an in-memory formatting of the flight paths for each FLS.  Filename specifies the path for a bagfile.  Topic specifies the topic of the bag file which the messages will be written to.  They are used when the FLS flight paths are generated using a named communication channel, see wiki.ros.org/Topics for details.
 
-![alt text](https://github.com/shahramg/FLSbagfile/flsarray.png?raw=true)
+![alt text](https://github.com/shahramg/FLSbagfile/blob/main/flsarray.png?raw=true)
 
-![alt text](https://github.com/shahramg/FLSbagfile/msgelt.png?raw=true)
+![alt text](https://github.com/shahramg/FLSbagfile/blob/main/msgelt.png?raw=true)
