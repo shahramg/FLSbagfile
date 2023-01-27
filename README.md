@@ -3,6 +3,8 @@ This repository creates bag files that describe the flight path of FLSs to rende
 
 Authors:  Hamed Alimohammadzadeh (halimoha@usc.edu), Daryon Mehrabon (daryonm@gmail.com), Shahram Ghandeharizadeh (shahram@usc.edu)
 
+This software was developed using MATLAB R2022b for academic use.
+
 # Features
 
   * Store the flight paths of FLSs to illuminate a motion illumination in a bag file. 
@@ -20,9 +22,27 @@ git clone https://github.com/shahramg/FLSbagfiles
 ```
 
 # Environment
-Install MATLAB with support for ROS.  This software was developed using MATLAB R2022b for academic use. 
+Install MATLAB with support for ROS.   
 Launch MATLAB from the directory that contains FLSbagfiles.
 Initialize ROS by issuing the following line in the command line:
 ```bash
 rosinit
 ```
+
+Generate the fls message type by issuing the following command in the MATLAB command line:
+```
+rosgenmsg('./ROSpackages/")
+```
+
+Verify the FLS message is registered with ROS by issuing the following command and find 'flyinglightspeck/fls' on this list.  
+```
+rosmsg list
+```
+
+If 'flyinglightspeck/fls' does not exist on the list then consider re-setting the ROS message list and clearing its cache by issuing the following commands:
+```
+clear classes;
+rehash toolboxcache;
+```
+
+# Input
