@@ -1,8 +1,8 @@
-function [xyz, rgba] = getPointCloudFromBagfile(path, sid, pid)
+function [lhd, rgba] = getPointCloudFromBagfile(path, sid, pid)
 
 bag = rosbag(path).select('Topic', sid);
 msgs = bag.readMessages;
-xyz = [];
+lhd = [];
 rgba = [];
 
 for i=1:length(msgs)
@@ -32,9 +32,9 @@ for i=1:length(msgs)
 
         if durs(j).Start <= pid && pid < durs(j).End
             coord = [
-                    lastCoord.X
-                    lastCoord.Y
-                    lastCoord.Z
+                    lastCoord.L
+                    lastCoord.H
+                    lastCoord.D
                 ];
             color = [
                     lastColor.R
@@ -45,13 +45,13 @@ for i=1:length(msgs)
             break;
         end
     end
-    xyz(i,:) = coord;
+    lhd(i,:) = coord;
     rgba(i,:) = color;
 end
 fileID = fopen('exp.ply','w');
 fprintf(fileID, 'ply\nformat ascii 1.0\nelement vertex %d\nproperty float x\nproperty float y\nproperty float z\nproperty uchar red\nproperty uchar green\nproperty uchar blue\nproperty uchar alpha\nelement face 0\nproperty list uchar int vertex_indices\nend_header\n', length(msgs));
-for i=1:length(xyz)
-    fprintf(fileID,'%f %f %f %d %d %d %d\n', xyz(i,1), xyz(i,2), xyz(i,3), rgba(i,1), rgba(i,2), rgba(i,3), rgba(i,4));
+for i=1:length(lhd)
+    fprintf(fileID,'%f %f %f %d %d %d %d\n', lhd(i,1), lhd(i,2), lhd(i,3), rgba(i,1), rgba(i,2), rgba(i,3), rgba(i,4));
 end
 fclose(fileID);
 end

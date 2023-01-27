@@ -1,5 +1,5 @@
 Header header
 uint8[] whatispresent
-FLSXYZ[] coordinate
+FLSLHD[] coordinate
 FLSRGBA[] color
 FLSDuration[] duration

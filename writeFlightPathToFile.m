@@ -18,10 +18,10 @@ for i=1:length(FLSArray)
         colorsElt = flsElt(j).colorsElt;
         dursElt = flsElt(j).dursElt;
 
-        CoordinateMsg = rosmessage('flyinglightspeck/FLSXYZ');
-        CoordinateMsg.X = coordElt.length;
-        CoordinateMsg.Y = coordElt.height;
-        CoordinateMsg.Z = coordElt.depth;
+        CoordinateMsg = rosmessage('flyinglightspeck/FLSLHD');
+        CoordinateMsg.L = coordElt.length;
+        CoordinateMsg.H = coordElt.height;
+        CoordinateMsg.D = coordElt.depth;
 
         ColorMsg = rosmessage('flyinglightspeck/FLSRGBA');
         ColorMsg.R = colorsElt.red;

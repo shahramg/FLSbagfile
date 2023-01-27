@@ -1,6 +1,4 @@
 function [M] = sliceFLSFlightPath(path, sid, spid, epid, outputPath)
-%GETFLSFLIGHTPATHSFORINTERVAL Summary of this function goes here
-%   Detailed explanation goes here
 
 bag = rosbag(path).select('Topic', sid);
 msgs = bag.readMessages;
