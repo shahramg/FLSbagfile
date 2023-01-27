@@ -8,10 +8,10 @@ This software was developed using MATLAB R2022b for academic use.
 # Features
 
   * Store the flight paths of FLSs to illuminate a motion illumination in a bag file. 
-  * Render a specific point cloud of a sequence that constitutes a scene. 
-  * Render a specific scene.
-  * Render a range of point clouds in a sequence that constitutes a scene.
-  * Fetch a point cloud given its id in a sequence that constitutes a scene.
+  * Retrieve a specific point cloud of a sequence that constitutes a scene. 
+  * Retrieve a specific scene.
+  * Retrieve a range of point clouds in a sequence that constitutes a scene.
+  * Retrieve a point cloud given its id in a sequence that constitutes a scene.
 
 # Limitations
 To generate a bag file, the flight path of FLSs must be formatted as described in Create a Bag File below.  This is the only format we are aware of given the novely of FLSs and their displays.  We will extend this repository with additional formats for FLS flight paths as they become available.  
