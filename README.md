@@ -23,6 +23,7 @@ git clone https://github.com/shahramg/FLSbagfiles
 
 # Environment
 Install MATLAB with support for ROS.   
+
 Launch MATLAB from the directory that contains FLSbagfiles.
 Initialize ROS by issuing the following line in the command line:
 ```bash
@@ -51,6 +52,8 @@ To create a bag file use the following command:
 writeFlightPathToFile(FLSArray, Filename, Topic)
 ```
 FLSArray is an in-memory formatting of the flight paths for each FLS.  Filename specifies the path for a bagfile.  Topic specifies the topic of the bag file which the messages will be written to.  They are used when the FLS flight paths are generated using a named communication channel, see wiki.ros.org/Topics for details.
+
+If the specified Filename exists then writeFlightPathToFile asks whether the Filename should be overwritten.
 
 FLSArray is an array of arrays, see figure below.  Each array contains msgElt instances.  FLSArray{i} is the array of msgElt instances for FLS i.  There may be one or more instances for each FLS depending on its flight path.  The number of instances for each FLS may not exceed the number of points in a point cloud. 
 ![alt text](https://github.com/shahramg/FLSbagfile/blob/main/images/flsarray.png?raw=true)
