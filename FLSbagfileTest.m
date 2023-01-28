@@ -14,6 +14,9 @@ classdef FLSbagfileTest < matlab.unittest.TestCase
         function flsMessageType(testCase)
             rosMessageTypes = rosmsg("list");
             testCase.verifyThat(matlab.unittest.constraints.AnyCellOf(rosMessageTypes), matlab.unittest.constraints.IsEqualTo('flyinglightspeck/fls'), 'flyinglightspeck/fls message type is not generated.')
+            testCase.verifyThat(matlab.unittest.constraints.AnyCellOf(rosMessageTypes), matlab.unittest.constraints.IsEqualTo('flyinglightspeck/FLSDuration'), 'flyinglightspeck/FLSDuration message type is not generated.')
+            testCase.verifyThat(matlab.unittest.constraints.AnyCellOf(rosMessageTypes), matlab.unittest.constraints.IsEqualTo('flyinglightspeck/FLSLHD'), 'flyinglightspeck/FLSLHD message type is not generated.')
+            testCase.verifyThat(matlab.unittest.constraints.AnyCellOf(rosMessageTypes), matlab.unittest.constraints.IsEqualTo('flyinglightspeck/FLSRGBA'), 'flyinglightspeck/FLSRGBA message type is not generated.')
         end
     end
     
