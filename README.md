@@ -1,5 +1,5 @@
 # FLSbagfile
-The software of this repository creates bag files that describe the flight path of FLSs to render illuminations.  A Flying Light Speck, FLS, is a miniature sized drone configured with light sources.  Swarms of FLSs will illuminate an object in a 3D volume, an FLS display.  Computing the flight path of FLSs to render an illumination is both computationally expensive and time consuming.  This repository contains MATLAB software to store these flight paths in a bag file.  These bag files may be used in simulation studies (e.g., AirSim, Gazebo) that investigate alternative architectures for an FLS display, lighting designs for FLSs and their rendering of different scenes, and algorithms for FLS failure handling and battery charging.
+The software of this repository creates a bag file that describe the flight path of FLSs to render an illumination.  A Flying Light Speck, FLS, is a miniature sized drone configured with light sources.  Swarms of FLSs will illuminate an object in a 3D volume, an FLS display.  Computing the flight path of FLSs to render an illumination is both computationally expensive and time consuming.  This repository contains MATLAB software to store these flight paths in a bag file.  These bag files may be used in simulation studies (e.g., AirSim, Gazebo) that investigate alternative architectures for an FLS display, lighting designs for FLSs and their rendering of different scenes, and algorithms for FLS failure handling and battery charging.
 
 Authors:  Hamed Alimohammadzadeh (halimoha@usc.edu), Daryon Mehraban (daryonm@gmail.com), Shahram Ghandeharizadeh (shahram@usc.edu)
 
@@ -67,3 +67,23 @@ FLSArray is an array of arrays, see figure below.  Each array contains msgElt in
 
 Each msgElt consists of a coordClass, colorClass, and durationClass, see figure below.
 ![alt text](https://github.com/shahramg/FLSbagfile/blob/main/images/msgelt.png?raw=true)
+
+# Citations
+
+Shahram Ghandeharizadeh. 2022. Display of 3D Illuminations using Flying Light Specks.  In Proceedings of the 30th ACM International Conference on Multimedia} (MM '22), October 10--14, 2022, Lisboa, Portugal, DOI 10.1145/3503161.3548250, ISBN 978-1-4503-9203-7/22/10.
+
+BibTex:
+```
+@inproceedings{10.1145/3503161.3548250,
+author = {Ghandeharizadeh, Shahram},
+title = {Display of 3D Illuminations using Flying Light Specks},
+year = {2022},
+isbn = {978-1-4503-9203-7/22/10},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+doi = {10.1145/3503161.3548250},
+booktitle = {ACM Multimedia},
+location = {Lisboa, Portugal},
+series = {MM '22}
+}
+```
