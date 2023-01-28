@@ -1,7 +1,7 @@
 # FLSbagfile
 This repository creates bag files that describe the flight path of FLSs to render illuminations.  A Flying Light Speck, FLS, is a miniature sized drone configured with light sources.  Swarms of FLSs will illuminate an object in a 3D volume, an FLS display.  Computing the flight path of FLSs to render an illumination is both computationally expensive and time consuming.  This repository contains MATLAB software to store these flight paths in a bag file.  These bag files may be used in simulation studies (e.g., AirSim, Gazebo) that investigate alternative architectures for an FLS display, lighting designs for FLSs and their rendering of different scenes, and algorithms for FLS failure handling and battery charging.
 
-Authors:  Hamed Alimohammadzadeh (halimoha@usc.edu), Daryon Mehrabon (daryonm@gmail.com), Shahram Ghandeharizadeh (shahram@usc.edu)
+Authors:  Hamed Alimohammadzadeh (halimoha@usc.edu), Daryon Mehraban (daryonm@gmail.com), Shahram Ghandeharizadeh (shahram@usc.edu)
 
 This software was developed using MATLAB R2022b for academic use.
 
