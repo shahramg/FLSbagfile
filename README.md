@@ -30,12 +30,12 @@ Initialize ROS by issuing the following command in the command line:
 rosinit
 ```
 
-Generate the fls message type by issuing the following command in the MATLAB command line:
+Generate the fls message types by issuing the following command in the MATLAB command line:
 ```
 rosgenmsg('./ROSpackages/")
 ```
 
-Verify the FLS message is registered with ROS by issuing the following command and find 'flyinglightspeck/fls' on this list.  
+Verify the FLS message types are registered with ROS by issuing the following command and find 'flyinglightspeck/fls' on this list.  
 ```
 rosmsg list
 ```
@@ -45,13 +45,13 @@ If 'flyinglightspeck/fls' does not exist on the list then consider re-setting th
 clear classes;
 rehash toolboxcache;
 ```
-Repeat the rosgenmsg command to register FLS message with ROS.
+Repeat the rosgenmsg command to register FLS message types with ROS.
 
-Run the following test to verify the required ROS messages have been created successfully.
+Run the following test to verify the FLS required ROS messages have been created successfully.
 ```
 runtests("FLSbagfileTest")
 ```
-This test checks for the existence of the following custom message types are present in the MATLAB environment:  flyinglightspeck/fls, flyinglightspeck/FLSLHD, flyinglightspeck/FLSDuration, flyinglightspeck/FLSRGBA.
+This test checks for the existence of the following custom message types in the MATLAB environment:  flyinglightspeck/fls, flyinglightspeck/FLSLHD, flyinglightspeck/FLSDuration, flyinglightspeck/FLSRGBA.
 
 # Create a Bag File
 To create a bag file use the following command:
