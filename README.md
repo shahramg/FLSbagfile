@@ -46,6 +46,11 @@ clear classes;
 rehash toolboxcache;
 ```
 
+Run the following test to verify the required ROS messages have been created successfully.
+```
+```
+This test checks for the existence of the following custom message types are present in the MATLAB environment:  flyinglightspeck/fls, flyinglightspeck/FLSLHD, flyinglightspeck/FLSDuration, flyinglightspeck/FLSRGBA.
+
 # Create a Bag File
 To create a bag file use the following command:
 ```
