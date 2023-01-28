@@ -49,9 +49,9 @@ Repeat the rosgenmsg command to register FLS message types with ROS.
 
 Run the following test to verify the FLS required ROS messages have been created successfully.
 ```
-runtests("FLSbagfileTest")
+runtests("FLSbagfileTest","ProcedureName","flsMessageType")
 ```
-This test checks for the existence of the following custom message types in the MATLAB environment:  flyinglightspeck/fls, flyinglightspeck/FLSLHD, flyinglightspeck/FLSDuration, flyinglightspeck/FLSRGBA.
+This unit test verifies the existence of the following custom message types in the MATLAB environment:  flyinglightspeck/fls, flyinglightspeck/FLSLHD, flyinglightspeck/FLSDuration, flyinglightspeck/FLSRGBA.
 
 # Create a Bag File
 To create a bag file for FLS flight paths use the following command:
@@ -67,6 +67,12 @@ FLSArray is an array of arrays, see figure below.  Each array contains msgElt in
 
 Each msgElt consists of a coordClass, colorClass, and durationClass, see figure below.
 ![alt text](https://github.com/shahramg/FLSbagfile/blob/main/images/msgelt.png?raw=true)
+
+The following unit test creates a deterministic point cloud and verifies the bag file representation is correct.
+```
+runtests("FLSbagfileTest","ProcedureName","flsMessageType")
+```
+It cleans up after itself.  Hence, there are no residue files left on the file system.
 
 # Citations
 
