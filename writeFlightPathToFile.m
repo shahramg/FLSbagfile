@@ -2,7 +2,7 @@ function [msgs] = writeFlightPathToFile(FLSArray, filename, topic)
 % write FLSArray to a bag file
 
 while exist(filename,'file')
-   choice = input(sprintf("%s already exists. Do you want to overwite it? [Y/n]\n", filename), "s");
+   choice = input(sprintf("%s already exists. Do you want to overwrite it? [Y/n]\n", filename), "s");
    if choice ~= 'y'
         filename = input("Enter a new name:\n", "s");
    else
