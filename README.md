@@ -61,7 +61,7 @@ FLSArray is an in-memory formatting of the flight paths for each FLS.  Filename 
 
 If the specified Filename exists then writeFlightPathToFile asks whether the Filename should be overwritten.
 
-FLSArray is an array of arrays, see figure below.  Each array contains msgElt instances.  FLSArray{i} is the array of msgElt instances for FLS i.  There may be one or more instances for each FLS depending on its flight path.  The number of instances for each FLS may not exceed the number of points in a point cloud. 
+FLSArray is an array of arrays, see figure below.  Each array contains msgElt instances.  FLSArray{i} is the array of msgElt instances for FLS i.  There may be one or more instances for each FLS depending on its flight path.  The number of instances for each FLS may not exceed the total number of points in a point cloud. 
 ![alt text](https://github.com/shahramg/FLSbagfile/blob/main/images/flsarray.png?raw=true)
 
 Each msgElt consists of a coordClass, colorClass, and durationClass, see figure below.
