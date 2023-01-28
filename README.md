@@ -25,7 +25,7 @@ git clone https://github.com/shahramg/FLSbagfiles
 Install MATLAB with support for ROS.   
 
 Launch MATLAB from the directory that contains FLSbagfiles.
-Initialize ROS by issuing the following line in the command line:
+Initialize ROS by issuing the following command in the command line:
 ```bash
 rosinit
 ```
@@ -45,6 +45,7 @@ If 'flyinglightspeck/fls' does not exist on the list then consider re-setting th
 clear classes;
 rehash toolboxcache;
 ```
+Repeat the rosgenmsg command to register FLS message with ROS.
 
 Run the following test to verify the required ROS messages have been created successfully.
 ```
