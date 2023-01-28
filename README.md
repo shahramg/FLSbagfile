@@ -58,7 +58,7 @@ To create a bag file for FLS flight paths use the following command:
 ```
 writeFlightPathToFile(FLSArray, Filename, Topic)
 ```
-FLSArray is an in-memory formatting of the flight paths for each FLS.  Filename specifies the path for a bagfile.  Topic specifies the topic of the bag file which the messages will be written to.  They are used when the FLS flight paths are generated using a named communication channel, see wiki.ros.org/Topics for details.
+FLSArray is an in-memory formatting of the flight paths for each FLS.  Filename specifies the path for a bagfile.  Topic specifies the topic of the bag file which the messages will be written to.  They are used when the FLS flight paths are generated using a named communication channel, see [ROS Topics](https://wiki.ros.org/Topics) for details.
 
 If the specified Filename exists then writeFlightPathToFile asks whether the Filename should be overwritten.
 
