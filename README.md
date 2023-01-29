@@ -51,7 +51,7 @@ Run the following test to verify the FLS required ROS messages have been created
 ```
 runtests("FLSbagfileTest","ProcedureName","flsMessageType")
 ```
-This unit test verifies the existence of the following custom message types in the MATLAB environment:  flyinglightspeck/fls, flyinglightspeck/FLSLHD, flyinglightspeck/FLSDuration, flyinglightspeck/FLSRGBA.
+This test verifies the existence of the following custom message types in the MATLAB environment:  flyinglightspeck/fls, flyinglightspeck/FLSLHD, flyinglightspeck/FLSDuration, flyinglightspeck/FLSRGBA.
 
 # Create a Bag File
 To create a bag file for FLS flight paths use the following command:
