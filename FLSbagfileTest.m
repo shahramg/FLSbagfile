@@ -3,11 +3,20 @@ classdef FLSbagfileTest < matlab.unittest.TestCase
     methods(Test)
 
         function flsMessageType(testCase)
+            testCase.verifyTrue(ros.internal.Global.isNodeActive, 'Global ros node is not initialized.');
             rosMessageTypes = rosmsg("list");
-            testCase.verifyThat(matlab.unittest.constraints.AnyCellOf(rosMessageTypes), matlab.unittest.constraints.IsEqualTo('flyinglightspeck/fls'), 'flyinglightspeck/fls message type is not generated.')
+            testCase.verifyThat(matlab.unittest.constraints.AnyCellOf(rosMessageTypes), matlab.unittest.constraints.IsEqualTo('flyinglightspeck/FLSElt'), 'flyinglightspeck/FLSElt message type is not generated.')
             testCase.verifyThat(matlab.unittest.constraints.AnyCellOf(rosMessageTypes), matlab.unittest.constraints.IsEqualTo('flyinglightspeck/FLSDuration'), 'flyinglightspeck/FLSDuration message type is not generated.')
             testCase.verifyThat(matlab.unittest.constraints.AnyCellOf(rosMessageTypes), matlab.unittest.constraints.IsEqualTo('flyinglightspeck/FLSLHD'), 'flyinglightspeck/FLSLHD message type is not generated.')
             testCase.verifyThat(matlab.unittest.constraints.AnyCellOf(rosMessageTypes), matlab.unittest.constraints.IsEqualTo('flyinglightspeck/FLSRGBA'), 'flyinglightspeck/FLSRGBA message type is not generated.')
+            try
+            rosmessage('flyinglightspeck/FLSElt');
+            rosmessage('flyinglightspeck/FLSDuration');
+            rosmessage('flyinglightspeck/FLSLHD');
+            rosmessage('flyinglightspeck/FLSRGBA');
+            catch
+                testCase.verifyFail('Custom messages are not added to the environment.');
+            end
         end
 
         function retrievePointCloud(testCase)

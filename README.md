@@ -35,12 +35,12 @@ Generate the fls message types by issuing the following command in the MATLAB co
 rosgenmsg('./ROSpackages/")
 ```
 
-Verify the FLS message types are registered with ROS by issuing the following command and find 'flyinglightspeck/fls' on this list.  
+Verify the FLS message types are registered with ROS by issuing the following command and find 'flyinglightspeck/FLSElt' on this list.  
 ```
 rosmsg list
 ```
 
-If 'flyinglightspeck/fls' does not exist on the list then consider re-setting the ROS message list and clearing its cache by issuing the following commands:
+If 'flyinglightspeck/FLSElt' does not exist on the list then consider re-setting the ROS message list and clearing its cache by issuing the following commands:
 ```
 clear classes;
 rehash toolboxcache;
@@ -51,7 +51,7 @@ Run the following test to verify the FLS required ROS messages have been created
 ```
 runtests("FLSbagfileTest","ProcedureName","flsMessageType")
 ```
-This test verifies the existence of the following custom message types in the MATLAB environment:  flyinglightspeck/fls, flyinglightspeck/FLSLHD, flyinglightspeck/FLSDuration, flyinglightspeck/FLSRGBA.
+This test verifies the existence of the following custom message types in the MATLAB environment:  flyinglightspeck/FLSElt, flyinglightspeck/FLSLHD, flyinglightspeck/FLSDuration, flyinglightspeck/FLSRGBA.
 
 # Create a Bag File
 To create a bag file for FLS flight paths use the following command:

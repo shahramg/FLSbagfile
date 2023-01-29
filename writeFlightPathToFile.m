@@ -15,7 +15,7 @@ msgs = [];
 for i=1:length(FLSArray)
     flsElt = FLSArray{i};
 
-    msg = rosmessage('flyinglightspeck/fls');
+    msg = rosmessage('flyinglightspeck/FLSElt');
    
     Whatispresent = [];
     Coordinate = [];
