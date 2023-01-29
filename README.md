@@ -68,11 +68,17 @@ FLSArray is an array of arrays, see figure below.  Each array contains msgElt in
 Each msgElt consists of a coordClass, colorClass, and durationClass, see figure below.
 ![alt text](https://github.com/shahramg/FLSbagfile/blob/main/images/msgelt.png?raw=true)
 
-The following unit test creates a deterministic point cloud and verifies the bag file representation is correct.
+The following unit test creates a scene contianing a sequence of deterministic point clouds and verifies the bag file representation is correct.
 ```
-runtests("FLSbagfileTest","ProcedureName","flsMessageType")
+runtests("FLSbagfileTest","ProcedureName","retrievePointCloud")
 ```
-It cleans up after itself.  Hence, there are no residue files left on the file system.
+
+The following unit test creates a scene contianing a sequence of deterministic point clouds and slice it. Then verifies the sliced bag file representation is correct.
+```
+runtests("FLSbagfileTest","ProcedureName","sliceFlightPath")
+```
+
+They clean up after running.  Hence, there are no residue files left on the file system.
 
 # Citations
 
