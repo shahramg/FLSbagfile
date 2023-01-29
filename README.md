@@ -33,7 +33,7 @@ rosinit
 
 Generate the fls message types by issuing the following command in the MATLAB command line:
 ```
-rosgenmsg('./ROSpackages/")
+rosgenmsg('./ROSpackages/')
 ```
 
 Verify the FLS message types are registered with ROS by issuing the following command and find 'flyinglightspeck/fls' on this list.  
