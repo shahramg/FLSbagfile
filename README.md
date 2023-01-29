@@ -12,6 +12,7 @@ This software was developed using MATLAB R2022b for academic use.
   * Retrieve a specific scene.
   * Retrieve a range of point clouds in a sequence that constitutes a scene.
   * Retrieve a point cloud given its id in a sequence that constitutes a scene.
+  * Data folder contains a bag file pertaining to the [rose clip](https://youtu.be/zaZwAiCsZUU) consisting of 115 point clouds.
 
 # Limitations
 To generate a bag file, the in-memory representation of FLS flight paths must adhere to the format described in Create a Bag File below.  This is the only format we are aware of given the novely of FLSs and their displays.  We will extend this repository with additional in-memory formats for FLS flight paths as they become available.  
@@ -32,7 +33,7 @@ rosinit
 
 Generate the fls message types by issuing the following command in the MATLAB command line:
 ```
-rosgenmsg('./ROSpackages/")
+rosgenmsg('./ROSpackages/')
 ```
 
 Verify the FLS message types are registered with ROS by issuing the following command and find 'flyinglightspeck/FLSElt' on this list.  
