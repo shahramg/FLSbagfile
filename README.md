@@ -74,12 +74,20 @@ The following unit test creates a scene contianing a sequence of deterministic p
 runtests("FLSbagfileTest","ProcedureName","retrievePointCloud")
 ```
 
-The following unit test creates a scene contianing a sequence of deterministic point clouds and slice it. Then verifies the sliced bag file representation is correct.
+The following unit test creates a scene contianing a sequence of deterministic point clouds and slices it. 
+Subsequently, it verifies the sliced bag file representation is correct.
 ```
 runtests("FLSbagfileTest","ProcedureName","sliceFlightPath")
 ```
 
 They clean up after running.  Hence, there are no residue files left on the file system.
+
+# Unit Tests
+There are three unit tests that were detailed in the previous sections.  To run all three, one after the other, issue the following command:
+```
+runtests("FLSbagfileTest")
+```
+The unit tests clean up after themselves, leaving no residual files behind.
 
 # Citations
 
