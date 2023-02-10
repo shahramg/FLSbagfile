@@ -40,16 +40,16 @@ classdef FLSbagfileTest < matlab.unittest.TestCase
                 FLSArray{i} = elts;
             end
 
-            writeFlightPathToFile(FLSArray, '__test__.bag', '/test');
+            writeFlightPathToFile(FLSArray, '__test0__.bag', '/test');
 
             randSeneIds = unique(randi(numberOfPointClouds, 1, 5));
             for i=1:length(randSeneIds)
                 k = randSeneIds(i);
-                [actLHD, actRGBA] = getPointCloudFromBagfile('__test__.bag', '/test', k, '__test__.ply');
+                [actLHD, actRGBA] = getPointCloudFromBagfile('__test0__.bag', '/test', k, '__test__.ply');
                 testCase.verifyEqual(actLHD, expLHD+k*delta);
                 delete '__test__.ply'
             end
-            delete '__test__.bag'
+            delete '__test0__.bag'
         end
 
         function sliceFlightPath(testCase)
@@ -73,18 +73,19 @@ classdef FLSbagfileTest < matlab.unittest.TestCase
                 FLSArray{i} = elts;
             end
 
-            writeFlightPathToFile(FLSArray, '__test__.bag', '/test');
+            writeFlightPathToFile(FLSArray, '__test0__.bag', '/test');
 
             spid = randi([1 numberOfPointClouds-1]);
             epid = randi([spid numberOfPointClouds]);
-            sliceFLSFlightPath('__test__.bag', '/test', spid, epid, '__test__.bag');
+            sliceFLSFlightPath('__test0__.bag', '/test', spid, epid, '__test1__.bag');
 
             for k=spid:epid
-                [actLHD, actRGBA] = getPointCloudFromBagfile('__test__.bag', '/test', k, '__test__.ply');
+                [actLHD, actRGBA] = getPointCloudFromBagfile('__test1__.bag', '/test', k, '__test__.ply');
                 testCase.verifyEqual(actLHD, expLHD+k*delta);
                 delete '__test__.ply'
             end
-            delete '__test__.bag'
+            delete '__test0__.bag'
+            delete '__test1__.bag'
         end
     end
     
