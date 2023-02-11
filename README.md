@@ -35,6 +35,11 @@ Generate the fls message types by issuing the following command in the MATLAB co
 ```
 rosgenmsg('./ROSpackages/')
 ```
+Depending on your operating system (MacOS, Windows), you may have to add custom message folder to the MATLAB path by executing:
+```
+addpath('/Users/shahramghandeharizadeh/Documents/src/FLSbagfile/ROSpackages/matlab_msg_gen_ros1/maci64/install/m')
+savepath
+```
 
 Verify the FLS message types are registered with ROS by issuing the following command and find 'flyinglightspeck/FLSElt' on this list.  
 ```
