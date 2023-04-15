@@ -35,6 +35,11 @@ Generate the fls message types by issuing the following command in the MATLAB co
 ```
 rosgenmsg('./ROSpackages/')
 ```
+Depending on your operating system (MacOS, Windows), you may be required to add custom message folder to the MATLAB path by executing:
+```
+addpath('/Users/shahramghandeharizadeh/Documents/src/FLSbagfile/ROSpackages/matlab_msg_gen_ros1/maci64/install/m')
+savepath
+```
 
 Verify the FLS message types are registered with ROS by issuing the following command and find 'flyinglightspeck/FLSElt' on this list.  
 ```
@@ -80,7 +85,7 @@ Subsequently, it verifies the sliced bag file representation is correct.
 runtests("FLSbagfileTest","ProcedureName","sliceFlightPath")
 ```
 
-They clean up after executing.  Hence, there are no residue files left on the file system.
+These unit tests clean up after executing.  Hence, there are no residue files left on the file system.
 
 # Unit Tests
 There are three unit tests that were detailed in the previous sections.  To run all three, one after the other, issue the following command:
@@ -91,7 +96,9 @@ The unit tests clean up after themselves, leaving no residual files behind.
 
 # Citations
 
-Shahram Ghandeharizadeh. 2022. Display of 3D Illuminations using Flying Light Specks.  In Proceedings of the 30th ACM International Conference on Multimedia} (MM '22), October 10--14, 2022, Lisboa, Portugal, DOI 10.1145/3503161.3548250, ISBN 978-1-4503-9203-7/22/10.
+1. Hamed Alimohammadzadeh, Daryon Mehraban, and Shahram Ghandeharizadeh.  Modeling Illumination Data with Flying Light Specks.  Submitted for publication.
+
+2. Shahram Ghandeharizadeh. 2022. Display of 3D Illuminations using Flying Light Specks.  In Proceedings of the 30th ACM International Conference on Multimedia} (MM '22), October 10--14, 2022, Lisboa, Portugal, DOI 10.1145/3503161.3548250, ISBN 978-1-4503-9203-7/22/10.
 
 BibTex:
 ```
