@@ -58,7 +58,7 @@ for i=1:length(FLSArray)
 end
 
 timeStamps = repelem([rostime("now")], length(msgs));
-bagwriter = rosbagwriter(filename);
+bagwriter = rosbagwriter(filename,"Compression","lz4", "ChunkSize",15000000);
 write(bagwriter,topic,timeStamps,msgs);
 
 end
